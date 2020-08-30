@@ -38,7 +38,7 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="primary" dark expand="md">
         <NavbarBrand tag={Link} to="/">Jakkrit</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -50,12 +50,23 @@ const Header = (props) => {
               <NavLink tag={Link} to="/contact">ติดต่อเรา</NavLink>
             </NavItem>
             <NavItem>
-            <NavLink tag={Link} to="/products/">สินค้า</NavLink>
+              <NavLink tag={Link} to="/products/">สินค้า</NavLink>
+            </NavItem>
+
+          </Nav>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink tag={Link} to="/profile/">ข้อมูลส่วนตัว</NavLink>
             </NavItem>
             <NavItem>
-            <NavLink tag={Link} to="/profile/">ข้อมูลส่วนตัว</NavLink>
+              <NavLink tag={Link} to="/login/">เข้าสู่ระบบ</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink tag={Link} to="/register/">สมัครสมาชิก</NavLink>
+            </NavItem>
+
           </Nav>
+
         </Collapse>
       </Navbar>
     </div>
